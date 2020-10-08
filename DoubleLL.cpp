@@ -7,7 +7,9 @@ DoubleLL::DoubleLL(){
 
 DoubleLL::~DoubleLL()
 {
-    //dtor
+    while (!isEmpty()){
+        pull();
+    }
 }
 
 int DoubleLL::length() {
