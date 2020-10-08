@@ -26,3 +26,20 @@ void DoubleLL::push(Entrada* data) {
     }
     this->size++;
 }
+
+void DoubleLL::pull() {
+    if (!isEmpty()) {
+        Node *current = this->head;
+        this->head = this->head->next;
+        this->size--;
+        if (isEmpty()){
+            this->tail = nullptr;
+        }else{
+            this->head->prev = nullptr;
+        }
+        delete current->data;
+        delete current;
+    }else {
+        throw invalid_argument("Empty list");
+    }
+}
