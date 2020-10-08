@@ -24,4 +24,5 @@ void DoubleLL::push(Entrada* data) {
     }else{
         this->tail = this->tail->next = new Node(data, nullptr, this->tail);
     }
+    this->size++;
 }
