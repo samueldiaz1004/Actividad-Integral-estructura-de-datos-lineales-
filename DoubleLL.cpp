@@ -17,3 +17,11 @@ int DoubleLL::length() {
 bool DoubleLL::isEmpty() {
     return this->size == 0;
 }
+
+void DoubleLL::push(Entrada* data) {
+    if (isEmpty()){
+        this->head = this->tail = new Node(data);
+    }else{
+        this->tail = this->tail->next = new Node(data, nullptr, this->tail);
+    }
+}

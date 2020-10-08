@@ -21,7 +21,7 @@ class DoubleLL
     public:
         DoubleLL();
         ~DoubleLL();
-        void push();
+        void push(Entrada* data);
         int length();
         bool isEmpty();
         void quickSort();
