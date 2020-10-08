@@ -9,3 +9,11 @@ DoubleLL::~DoubleLL()
 {
     //dtor
 }
+
+int DoubleLL::length() {
+    return this->size;
+}
+
+bool DoubleLL::isEmpty() {
+    return this->size == 0;
+}
