@@ -34,6 +34,7 @@ class DoubleLL
         int size;
         void pull();
         void quickSort(Node* ini, Node* fin);
+        void swap(Node* a, Node* b);
         Node* particionar(Node* ini, Node* fin);
 };
 
