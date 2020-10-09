@@ -45,3 +45,36 @@ void DoubleLL::pull() {
         throw invalid_argument("Empty list");
     }
 }
+
+void DoubleLL::quickSort() {
+    quickSort(this->head, this->tail);
+}
+
+void DoubleLL::quickSort(Node* ini, Node* fin) {
+    if (fin && ini != fin && fin->next != ini) {
+        Node* piv = particionar(ini, fin);
+        quickSort(ini, piv->prev);
+        quickSort(piv->next, fin);
+    }
+}
+
+Node* DoubleLL::particionar(Node* ini, Node* fin) {
+    unsigned long long piv = ini->data->getIp();
+    Node *i = ini->next,
+         *j = i;
+    while (j != fin->next) {
+        if (j->data->getIp() < piv) {
+            swap(i, j);
+            i = i->next;
+        }
+        j = j->next;
+    }
+    swap(ini, i->prev);
+    return i->prev;
+}
+
+void DoubleLL::swap(Node* a, Node* b) {
+    Entrada* temp = b->data;
+    b->data = a->data;
+    a->data = temp;
+}
