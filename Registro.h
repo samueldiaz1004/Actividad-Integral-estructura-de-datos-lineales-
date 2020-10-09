@@ -12,10 +12,10 @@ class Registro
         void quickSort();
         void guardar(string fileName);
         void busqueda(string ipIni, string ipFin);
+        void print(ostream& stream);
 
     private:
         DoubleLL bitacora;
-        void print(ostream& stream);
         void print(ostream& stream, int ini, int fin);
         void separar(vector<string> &datos, string linea);
 

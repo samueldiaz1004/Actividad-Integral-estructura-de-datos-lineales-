@@ -47,7 +47,9 @@ void Registro::busqueda(string ipIni, string ipFin)
     int indiceIni = bitacora.busqueda(ip1,false);
     int indiceFin = bitacora.busqueda(ip2,true);
 
-    print(cout,indiceIni,indiceFin);
+    if (indiceIni != -1 && indiceFin != -1){
+        print(cout,indiceIni,indiceFin);
+    }
 }
 
 void Registro::print(ostream& stream)
@@ -57,7 +59,7 @@ void Registro::print(ostream& stream)
 
 void Registro::print(ostream& stream, int ini, int fin)
 {
-    this->bitacora.print(cout,ini,fin);
+    this->bitacora.print(stream,ini,fin);
 }
 
 void Registro::separar(vector<string> &datos, string linea)
