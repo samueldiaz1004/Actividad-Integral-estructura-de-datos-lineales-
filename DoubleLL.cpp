@@ -78,3 +78,47 @@ void DoubleLL::swap(Node* a, Node* b) {
     b->data = a->data;
     a->data = temp;
 }
+
+void DoubleLL::print(ostream &stream, int ini, int fin) {
+    //int cont = ini;
+    Node* current = this->head;
+    for (int i = 0; i < ini; i++){
+        current = current->next;
+    }
+    for (int i = ini; i <= fin; i++){
+        current->data->print(stream);
+        cout << endl;
+        current = current->next;
+    }
+}
+
+int DoubleLL::busqueda(unsigned long long ip, bool reverse) {
+    Node* current;
+    int pos;
+    if (!reverse){
+        current = this->head;
+        pos = 0;
+        while (current != nullptr){
+            unsigned long long ipAux = current->data->getIp() / 10000;
+            if (ipAux >= ip){
+                return pos;
+            }else{
+                current = current->next;
+                pos++;
+            }
+        }
+    }else{
+        current = this->tail;
+        pos = this->size - 1;
+        while (current != nullptr){
+            unsigned long long ipAux = current->data->getIp() / 10000;
+            if (ipAux <= ip){
+                return pos;
+            }else{
+                current = current->prev;
+                pos--;
+            }
+        }
+    }
+    return -1;
+}
