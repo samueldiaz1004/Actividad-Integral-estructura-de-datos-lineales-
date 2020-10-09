@@ -12,19 +12,19 @@ class Entrada
 {
     public:
         Entrada(string linea);
-        int getIp();
+        unsigned long long getIp();
         void print(ostream &stream);
 
     private:
-        string ip;
-        string mensaje;
         string mes;
         string dia;
         string hora;
-        int id;
-        void separacion(vector<string> &datos, string linea, string chars);
-        int convertirIp(string ip);
+        string ip;
+        string mensaje;
+        unsigned long long id;
+        void separacion(vector<string> &datos, string linea);
         void separacionIp(vector<string> &datos, string linea);
+        void convertirIp(vector<string> datosIp);
 
 };
 
