@@ -35,14 +35,14 @@ void Registro::busqueda(string ipIni, string ipFin)
     separar(fin,ipFin);
 
     ip1 = stoi(ini[3]);
-    ip1 += stoi(ini[2]) * pow(10,2);//Comprobar potencias
-    ip1 += stoi(ini[1]) * pow(10,5);
-    ip1 += stoi(ini[0]) * pow(10,7);
+    ip1 += stoi(ini[2]) * pow(10,3);
+    ip1 += stoi(ini[1]) * pow(10,6);
+    ip1 += stoi(ini[0]) * pow(10,9);
 
     ip2 = stoi(fin[3]);
-    ip2 += stoi(fin[2]) * pow(10,2);
-    ip2 += stoi(fin[1]) * pow(10,5);
-    ip2 += stoi(fin[0]) * pow(10,7);
+    ip2 += stoi(fin[2]) * pow(10,3);
+    ip2 += stoi(fin[1]) * pow(10,6);
+    ip2 += stoi(fin[0]) * pow(10,9);
 
     int indiceIni = bitacora.busqueda(ip1,false);
     int indiceFin = bitacora.busqueda(ip2,true);
