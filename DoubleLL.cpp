@@ -60,17 +60,39 @@ void DoubleLL::quickSort(Node* ini, Node* fin) {
 
 Node* DoubleLL::particionar(Node* ini, Node* fin) {
     unsigned long long piv = ini->data->getIp();
-    Node *i = ini->next,
+    //https://www.geeksforgeeks.org/quicksort-for-linked-list/
+    /*Node* i = ini->prev;
+    for (Node* j = ini; j != fin; j = j->next){
+        if (j->data->getIp() <= piv){
+            i = (i == nullptr) ? ini : i->next;
+            swap(i, j);
+        }
+    }
+    i = (i == nullptr) ? ini : i->next;
+    swap(i, fin);
+    return i;*/
+
+    Node* i = ini->next;
+    for (Node* j = i; j != fin; j = j->next){
+        if (j->data->getIp() <= piv){
+            swap(i, j);
+            i = i->next;
+        }
+    }
+    swap(ini, i->prev);
+    return i->prev;
+
+    /*Node *i = ini->next,
          *j = i;
-    while (j != fin->next) {
-        if (j->data->getIp() < piv) {
+    while (j != fin) {
+        if (j->data->getIp() <= piv) {
             swap(i, j);
             i = i->next;
         }
         j = j->next;
     }
     swap(ini, i->prev);
-    return i->prev;
+    return i->prev;*/
 }
 
 void DoubleLL::swap(Node* a, Node* b) {
