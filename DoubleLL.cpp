@@ -62,7 +62,7 @@ Node* DoubleLL::particionar(Node* ini, Node* fin) {
     unsigned long long piv = ini->data->getIp();
     Node *i = ini->next,
          *j = i;
-    while (j != fin) {
+    while (j != fin->next) {
         if (j->data->getIp() < piv) {
             swap(i, j);
             i = i->next;
