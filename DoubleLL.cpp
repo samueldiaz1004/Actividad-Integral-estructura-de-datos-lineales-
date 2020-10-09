@@ -72,27 +72,39 @@ Node* DoubleLL::particionar(Node* ini, Node* fin) {
     swap(i, fin);
     return i;*/
 
-    Node* i = ini->next;
-    for (Node* j = i; j != fin; j = j->next){
-        if (j->data->getIp() <= piv){
+    /*Node* i = ini->next;
+    for (Node* j = i; j != fin->next; j = j->next){
+        if (j->data->getIp() < piv){
+            if (i == nullptr){
+                i = fin;
+            }
             swap(i, j);
             i = i->next;
+            if (i == nullptr){
+                i = fin;
+            }
         }
     }
+    if (i == nullptr){
+        i = fin;
+    }
     swap(ini, i->prev);
-    return i->prev;
+    return i->prev;*/
 
-    /*Node *i = ini->next,
+    Node *i = ini->next,
          *j = i;
-    while (j != fin) {
+    while (j != fin->next) {
         if (j->data->getIp() <= piv) {
             swap(i, j);
             i = i->next;
         }
         j = j->next;
     }
+    if (i == nullptr){
+        i = fin;
+    }
     swap(ini, i->prev);
-    return i->prev;*/
+    return i->prev;
 }
 
 void DoubleLL::swap(Node* a, Node* b) {
