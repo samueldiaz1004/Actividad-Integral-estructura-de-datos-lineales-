@@ -7,7 +7,7 @@ Registro::Registro(string fileName)
     archivo.open(fileName);
 
     while(getline(archivo,line)){
-        bitacora.push(); // Revisar implementacion en DoubleLL
+        bitacora.push(new Entrada(line));
     }
     archivo.close();
 }
@@ -34,27 +34,25 @@ void Registro::busqueda(string ipIni, string ipFin)
     separar(ini,ipIni);
     separar(fin,ipFin);
 
-    ip1 = stoi(ini[3]) * pow(10,4);
-    ip1 += stoi(ini[2]) * pow(10,6);
-    ip1 += stoi(ini[1]) * pow(10,9);
-    ip1 += stoi(ini[0]) * pow(10,11);
+    ip1 = stoi(ini[3]);
+    ip1 += stoi(ini[2]) * pow(10,2);//Comprobar potencias
+    ip1 += stoi(ini[1]) * pow(10,5);
+    ip1 += stoi(ini[0]) * pow(10,7);
 
-    ip2 = stoi(fin[3]) * pow(10,4);
-    ip2 += stoi(fin[2]) * pow(10,6);
-    ip2 += stoi(fin[1]) * pow(10,9);
-    ip2 += stoi(fin[0]) * pow(10,11);
+    ip2 = stoi(fin[3]);
+    ip2 += stoi(fin[2]) * pow(10,2);
+    ip2 += stoi(fin[1]) * pow(10,5);
+    ip2 += stoi(fin[0]) * pow(10,7);
 
-    int indiceIni = bitacora.busqueda(ip1,0); //Revisar implementacion en DoubleLL
-    int indiceFin = bitacora.busqueda(ip2,1);
+    int indiceIni = bitacora.busqueda(ip1,false);
+    int indiceFin = bitacora.busqueda(ip2,true);
 
     print(cout,indiceIni,indiceFin);
 }
 
 void Registro::print(ostream& stream)
 {
-    for(auto i : this->bitacora){ //Revisar implementacion en DoubleLL
-    i->print(stream);
-    }
+    bitacora.print(stream, 0, bitacora.length() - 1);
 }
 
 void Registro::print(ostream& stream, int ini, int fin)

@@ -25,7 +25,7 @@ class DoubleLL
         int length();
         bool isEmpty();
         void quickSort();
-        int busqueda(int ip, bool direccion);
+        int busqueda(unsigned long long ip, bool reverse);
         void print(ostream& stream, int ini, int fin);
 
     private:
