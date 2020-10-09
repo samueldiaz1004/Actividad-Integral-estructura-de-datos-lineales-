@@ -51,7 +51,7 @@ void DoubleLL::quickSort() {
 }
 
 void DoubleLL::quickSort(Node* ini, Node* fin) {
-    if (fin && ini != fin && fin->next != ini) {
+    if (fin != nullptr && ini != fin && fin->next != ini) {
         Node* piv = particionar(ini, fin);
         quickSort(ini, piv->prev);
         quickSort(piv->next, fin);
@@ -62,7 +62,7 @@ Node* DoubleLL::particionar(Node* ini, Node* fin) {
     unsigned long long piv = ini->data->getIp();
     Node *i = ini->next,
          *j = i;
-    while (j != fin->next) {
+    while (j != fin) {
         if (j->data->getIp() < piv) {
             swap(i, j);
             i = i->next;
