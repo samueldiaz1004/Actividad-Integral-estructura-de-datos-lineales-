@@ -61,7 +61,7 @@ void Entrada::convertirIp(vector<string> datosIp)
 {
     this->id = stoi(datosIp[4]);
     this->id += stoi(datosIp[3]) * pow(10,4);
-    this->id += stoi(datosIp[2]) * pow(10,6);
-    this->id += stoi(datosIp[1]) * pow(10,9);
-    this->id += stoi(datosIp[0]) * pow(10,11);
+    this->id += stoi(datosIp[2]) * pow(10,7);
+    this->id += stoi(datosIp[1]) * pow(10,10);
+    this->id += stoi(datosIp[0]) * pow(10,13);
 }
