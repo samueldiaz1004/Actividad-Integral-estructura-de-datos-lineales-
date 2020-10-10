@@ -91,7 +91,7 @@ void DoubleLL::print(ostream &stream, int ini, int fin) {
     }
     for (int i = ini; i <= fin; i++){
         current->data->print(stream);
-        cout << endl;
+        stream << endl;
         current = current->next;
     }
 }
