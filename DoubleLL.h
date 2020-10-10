@@ -21,11 +21,11 @@ class DoubleLL
     public:
         DoubleLL();
         ~DoubleLL();
-        void push();
+        void push(Entrada* data);
         int length();
         bool isEmpty();
         void quickSort();
-        int busqueda(int ip, bool direccion);
+        int busqueda(unsigned long long ip, bool reverse);
         void print(ostream& stream, int ini, int fin);
 
     private:
@@ -34,6 +34,7 @@ class DoubleLL
         int size;
         void pull();
         void quickSort(Node* ini, Node* fin);
+        void swap(Node* a, Node* b);
         Node* particionar(Node* ini, Node* fin);
 };
 
