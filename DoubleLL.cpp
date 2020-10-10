@@ -63,13 +63,17 @@ Node* DoubleLL::particionar(Node* ini, Node* fin) {
     Node *i = ini->next,
          *j = i;
     while (j != fin->next) {
-        if (j->data->getIp() < piv) {
+        if (j->data->getIp() <= piv) {
             swap(i, j);
-            i = i->next;
+            i = (i->next == nullptr)? fin : i->next;
         }
         j = j->next;
     }
-    swap(ini, i->prev);
+    if (i->next != nullptr){
+        swap(ini, i->prev);
+    } else {
+        swap(ini, i);
+    }
     return i->prev;
 }
 
