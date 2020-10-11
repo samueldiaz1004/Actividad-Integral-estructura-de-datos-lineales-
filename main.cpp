@@ -1,3 +1,17 @@
+/*/
+Act 2.3 - Actividad Integral estructura de datos lineales
+Programa para el ordenamiento y busqueda en un
+registro de accesos ilegales a un servidor almacenados
+en el archivo "bitacora.txt"
+
+Owen Jauregui Borbon - A01638122
+Luis Humberto Sanchez Vaca - A0163129
+Samuel Alejandro Diaz del Guante Ochoa - A01637592
+
+Fecha de creación: 07/10/2020
+Fecha de edición: 11/10/2020
+/*/
+
 #include <iostream>
 #include "Registro.h"
 using namespace std;
@@ -22,6 +36,8 @@ int main()
             cout << "Ip fin: ";
             getline(cin,ipFin);
             cout << "Resultados" << endl;
+            // Formato de entrada: ###.###.###.###
+            // (ipIni < ipFin) para despliegue de entradas asendentes
             bitacora.busqueda(ipIni,ipFin);
             cout << endl;
         }
