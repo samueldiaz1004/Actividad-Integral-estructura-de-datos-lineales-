@@ -8,7 +8,7 @@ Samuel Alejandro Diaz del Guante Ochoa - A01637592
 #include "Entrada.h"
 
 // Constructor de la clase Entrada
-// Recibe un string con toda la información del acceso ilegal
+// Recibe un string con toda la informacion del acceso ilegal
 Entrada::Entrada(string linea)
 {
     // Vector que almacena los datos del acceso separados (mes, dia, tiempo, ip, mensaje)
