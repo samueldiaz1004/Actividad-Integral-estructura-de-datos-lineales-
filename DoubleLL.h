@@ -1,3 +1,16 @@
+/*/
+Header de la clase DoubleLL
+
+Clase que almacena punteros a objetos tipo Entrada mediante la
+implementacion de la estructura de datos "Double Linked List".
+Puede realizar el ordenamiento de cada Entrada basandose en su
+ip y tambien realizar busquedas de la primera o ultima ocurrencia
+de una ip especifica.
+
+Owen Jauregui Borbon - A01638122
+Luis Humberto Sanchez Vaca - A0163129
+Samuel Alejandro Diaz del Guante Ochoa - A01637592
+/*/
 #ifndef DOUBLELL_H
 #define DOUBLELL_H
 
