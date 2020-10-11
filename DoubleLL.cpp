@@ -92,6 +92,10 @@ void DoubleLL::pull() {
 // de ordenamiento "Quick Sort"
 // No recibe parametros
 // No devuelve ningun valor
+// Complejidad: 
+//      Mejor de los casos O(n*log(n))
+//      Peor de los casos O(n^2)
+//      Promedio O(n*log(n))
 void DoubleLL::quickSort() {
     // Se pasan los punteros de inicio y fin de la Double Linked List
     quickSort(this->head, this->tail);
@@ -101,6 +105,10 @@ void DoubleLL::quickSort() {
 // Recibe dos punteros a Node para el inicio y fin del segmento
 // que se va a ordenar para cada recursion
 // No devuelve ningun valor
+// Complejidad: 
+//      Mejor de los casos O(n*log(n))
+//      Peor de los casos O(n^2)
+//      Promedio O(n*log(n))
 void DoubleLL::quickSort(Node* ini, Node* fin) {
     // Condicional para saber si el inicio esta antes que el fin
     // y si el fin aun sigue siendo un puntero valido
@@ -120,6 +128,7 @@ void DoubleLL::quickSort(Node* ini, Node* fin) {
 // derecha del pivote, mientras los menores se colocan a su izquierda
 // Recibe dos punteros a Node para el inicio y fin del segmento
 // en el que se realizara la division
+// Complejidad: O(n)
 Node* DoubleLL::particionar(Node* ini, Node* fin) {
     // El nodo "ini" se selecciona como el pivote
     // Se toma la ip del primer elemento para las comparaciones
@@ -197,6 +206,10 @@ void DoubleLL::print(ostream &stream, int ini, int fin) {
 // Funcion que sirve para encontrar la posicion de un elemento por su ip
 // Recibe la ip sin puerto y un booleano que indica como se quiere recorrer
 // la lista. Regresa un entero con la posicion encontrada
+// Complejidad: 
+//      Mejor de los casos O(1)
+//      Peor de los casos O(n)
+//      Promedio O(n)
 int DoubleLL::busqueda(unsigned long long ip, bool reverse) {
     // Se crea un puntero a nodo y un entero con la posicion
     Node* current;
