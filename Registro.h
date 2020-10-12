@@ -1,3 +1,16 @@
+/*/
+Header de la clase Registro
+
+Clase que se encarga de almacenar datos de tipo Entrada
+provenientes del archivo "Bitacora.txt" en una lista doblemente
+enlazada. Asimismo ordena y hace busquedas por medio de metodos
+de la clase "DoubleLL"
+
+Owen Jauregui Borbon - A01638122
+Luis Humberto Sanchez Vaca - A01638029
+Samuel Alejandro Diaz del Guante Ochoa - A01637592
+/*/
+
 #ifndef REGISTRO_H
 #define REGISTRO_H
 

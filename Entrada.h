@@ -6,7 +6,7 @@ de una instancia registrada en el archivo "bitacora.txt". Adicionalmente los ade
 candidatos optimos para los algoritmos de ordenamiento y busqueda en una lista doblemente enlazda.
 
 Owen Jauregui Borbon - A01638122
-Luis Humberto Sanchez Vaca - A0163129
+Luis Humberto Sanchez Vaca - A01638029
 Samuel Alejandro Diaz del Guante Ochoa - A01637592
 /*/
 #ifndef ENTRADA_H
