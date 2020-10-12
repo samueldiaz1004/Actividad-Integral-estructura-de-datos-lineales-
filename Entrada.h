@@ -1,3 +1,14 @@
+/*/
+Header de la clase Entrada
+
+Clase que almacena individualmente los detalles (Mes, dia, fecha, direccion IP y razon de falla)
+de una instancia registrada en el archivo "bitacora.txt". Adicionalmente los adecua para ser
+candidatos optimos para los algoritmos de ordenamiento y busqueda en una lista doblemente enlazda.
+
+Owen Jauregui Borbon - A01638122
+Luis Humberto Sanchez Vaca - A01638029
+Samuel Alejandro Diaz del Guante Ochoa - A01637592
+/*/
 #ifndef ENTRADA_H
 #define ENTRADA_H
 
